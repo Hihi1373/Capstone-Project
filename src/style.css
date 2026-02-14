@@ -92,3 +92,7 @@
 }
 
 #instruction { max-width: 800px; }
+.sensor.dragging {
+  pointer-events: none;
+  z-index: 9999 !important;
+}
