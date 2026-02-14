@@ -1,0 +1,94 @@
+/* MAP (Design) */
+#map {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  border: 2px solid #333;
+  margin-bottom: 20px;
+  background: #eef;
+  overflow: hidden;
+}
+
+/* MAP (Simulation copy) */
+#map-sim {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  border: 2px solid #333;
+  margin-bottom: 20px;
+  background: #eef;
+  overflow: hidden;
+}
+
+#robot, #robot-sim {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 170px;
+  left: 270px;
+  transform-origin: center;
+}
+
+#robot-body, #robot-body-sim {
+  width: 100%;
+  height: 100%;
+  background: #555;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Wheels */
+.wheel {
+  width: 12px;
+  height: 12px;
+  background: #333;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  transition: transform 0.1s linear;
+}
+
+.wheel-tl { top: -10px; left: -10px; }
+.wheel-bl { bottom: -10px; left: -10px; }
+.wheel-tr { top: -10px; right: -10px; }
+.wheel-br { bottom: -10px; right: -10px; }
+
+/* Sensor Tray */
+#sensor-tray {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sensor {
+  width: 120px;
+  padding: 8px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 6px;
+  cursor: grab;
+  user-select: none;
+  position: relative;
+}
+
+.motion { background: #ffb703; color: black; }
+.proximity { background: #219ebc; color: white; }
+.vision { background: #7209b7; color: white; }
+
+/* Dragging style */
+.sensor.dragging {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 0;
+}
+.sensor.placed {
+  width: 120px;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+#instruction { max-width: 800px; }
